@@ -1,0 +1,40 @@
+{% extends 'temp/admin_base.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<body>
+		<h2>view feedback</h2>
+		<table class="table table-striped text-light table-bordered">
+			<tr> 
+				<th>feedback</th>
+				<th>customer_id</th>
+				<th>date</th>
+				<th>time</th>
+			</tr>
+            {% for i in ac%}
+
+			<tr>
+				<td>{{ i.feedback }}</td>
+				<td>{{ i.Customer.customer_name }}</td>
+				<td>{{ i.date }}</td>
+                <td>{{ i.time }}</td>
+
+				
+			
+			
+
+			</tr>
+            {% endfor %}
+
+
+
+		</table>
+
+
+	</body>
+</html>
+{% endblock %}

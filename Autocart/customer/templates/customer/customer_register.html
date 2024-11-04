@@ -1,0 +1,70 @@
+{%  extends 'temp/home_base.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>customer register</title>
+</head>
+<body>
+	<h2>customer register</h2>
+	<form method="post">
+        {% csrf_token %}
+		<table class="table table-striped text-light table-bordered">
+			<tr>
+
+				<td>username</td>
+				<td><input type="text" name="usrname"></td>
+			</tr>
+			<tr>
+				<td>password</td>
+				<td><input type="password" name="pwd"></td>
+			</tr>
+
+				<td> name</td>
+				<td><input type="text" name="uname"></td>
+			</tr>
+			<tr>
+				<td>date of birth</td>
+				<td><input type="date" name="u_dob"></td>
+			</tr>
+
+			<tr>
+				<td>Address</td>
+					<td><textarea name="address" rows="3" cols="20"></textarea></td>
+			</tr>
+
+			<tr>
+				<td>City</td>
+					<td><input type="text" name="ucity"></td>
+			</tr>
+
+			<tr>
+				<td>Phone number</td>
+					<td><input type="text" name="uphnum"></td>
+			</tr>
+
+			<tr>
+				<td>Gender</td>
+						<td><input type="radio" id="Male" name="gender" value="Male">Male
+					
+						<input type="radio" id="female" name="gender" value="female">female
+					
+						<input type="radio" id="others" name="gender" value="others">others</td> 
+					
+
+			</tr>
+
+			<tr>
+				<td>mail</td>
+				<td><input type="text" name="umail"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="" value="submit"></td>
+			</tr>
+		</table>
+	</form>
+
+
+</body>
+</html>
+{% endblock %}

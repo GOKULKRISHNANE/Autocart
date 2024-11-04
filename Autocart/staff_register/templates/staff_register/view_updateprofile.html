@@ -1,0 +1,51 @@
+{% extends 'temp/staff_base.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<body>
+		<h2>view updated profile</h2>
+		<table class="table table-striped text-light table-bordered">
+			<tr> 
+				<th>staff_id</th>
+				<th>name</th>
+				<th>address</th>
+				<th>phone number</th>
+				<th>date of birth</th>
+				<th>gender</th>
+				<th>mail</th>
+				<th>status</th>
+			</tr>
+            {% for i in al %}
+
+			<tr>
+				<td>{{ i.staff_id }}</td>
+				<td>{{ i.staff_name }}</td>
+				<td>{{ i.staff_address }}</td>
+				<td>{{ i.staff_phonenumber }}</td>
+				<td>{{ i.staff_dateofbirth }}</td>
+				<td>{{ i.staff_gender }}</td>
+				<td>{{ i.staff_email }}</td>
+
+			
+			<td>
+				<a href="/staff_register/update_profile/{{ i.staff_id }}">EDIT</a>
+				<a href="/staff_register/delete/{{ i.staff_id }}">DELETE</a>
+				
+			</td>
+		</tr>
+            {% endfor %}
+
+
+
+
+
+		</table>
+
+
+	</body>
+</html>
+{% endblock %}

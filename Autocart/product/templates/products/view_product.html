@@ -1,0 +1,46 @@
+{% extends 'temp/staff_base.html.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<body>
+		<h2>view product</h2>
+		<table class="table table-striped text-light table-bordered">
+			<tr> 
+				<th>product category</th>
+				<th>name</th>
+				<th>image</th>
+				<th>price</th>
+				<th>quantity</th>
+				<th>manufacture date</th>
+				<th>experity date</th>
+				<th>additional description</th>
+			</tr>
+            {% for i in af %}
+
+			<tr>
+				<td>{{ i.product_id }}</td>
+				<td>{{ i.category_id }}</td>
+				<td>{{ i.product_name }}</td>
+				<td>{{ i.product_price}}</td>
+				<td>{{ i.product_photo }}</td>
+				<td>{{ i.product_quantity }}</td>
+				<td>{{ i.manufacturer_date }}</td>
+				<td>{{ i.product_experity }}</td>
+                <td>{{ i.additional_description }}</td>
+			</tr>
+            {% endfor %}
+
+
+
+
+
+		</table>
+
+
+	</body>
+</html>
+{% endblock %}

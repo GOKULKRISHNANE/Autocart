@@ -1,0 +1,36 @@
+{%  extends 'temp/customer_base.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<body>
+		<h2>view complaint</h2>
+		<table class="table table-striped text-light table-bordered">
+			<tr> 
+				<th>complaint</th>
+				<th>customer_id</th>
+				<th>date</th>
+				<th>time</th>
+			</tr>
+            {% for i in a %}
+
+			<tr>
+				<td>{{ i.complaint }}</td>
+				<td>{{ i.customer_id }}</td>
+				<td>{{ i.date }}</td>
+				<td>{{ i.time }}</td>
+			<td><a href="/complaint/post_replay/{{ i.complaint_id }}">Replay</a></td>
+            </tr>
+            {% endfor %}
+
+
+
+		</table>
+
+
+	</body>
+</html>
+{% endblock %}

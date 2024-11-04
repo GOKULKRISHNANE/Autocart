@@ -1,0 +1,38 @@
+{%  extends 'temp/staff_base.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<body>
+		<h2>view bill</h2>
+		<table class="table table-striped text-light table-bordered">
+			<tr> 
+				<th>customer_name</th>
+				<th>amount</th>
+				<th>date</th>
+				<th>time</th>
+                <th>status</th>
+			</tr>
+            {% for i in a %}
+
+			<tr>
+				<td>{{ i.customer_id}}</td>
+				<td>{{ i.bill_amount}}</td>
+				<td>{{ i.date }}</td>
+				<td>{{ i.time }}</td>
+                <td>{{ i.status }}</td>
+{#			<td><a href="/complaint/post_replay/{{ i.complaint_id }}">Replay</a></td>#}
+            </tr>
+            {% endfor %}
+
+
+
+		</table>
+
+
+	</body>
+</html>
+{% endblock %}

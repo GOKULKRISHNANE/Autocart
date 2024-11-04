@@ -1,0 +1,71 @@
+{% extends 'temp/admin_base.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>staff register</title>
+</head>
+<body>
+	<h2>Staff register</h2>
+	<form method="post">
+        {% csrf_token %}
+		<table class="table table-striped text-light table-bordered">
+			<tr>
+
+				<td>username</td>
+				<td><input type="text" name="uname"></td>
+			</tr>
+			<tr>
+				<td>password</td>
+				<td><input type="password" name="pwd"></td>
+			</tr>
+
+				<td>staff name</td>
+				<td><input type="text" name="sname"></td>
+			</tr>
+			<tr>
+				<td>date of birth</td>
+				<td><input type="date" name="s_dob"></td>
+			</tr>
+
+			<tr>
+				<td>Address</td>
+					<td><textarea name="address" rows="3" cols="20"></textarea></td>
+			</tr>
+
+			<tr>
+				<td>City</td>
+					<td><input type="text" name="scity"></td>
+			</tr>
+
+			<tr>
+				<td>Phone number</td>
+					<td><input type="text" name="sphnum"></td>
+			</tr>
+
+			<tr>
+				<td>Gender</td>
+						<td><input type="radio" id="Male" name="gender" value="Male">Male
+					
+						<input type="radio" id="female" name="gender" value="female">female
+					
+						<input type="radio" id="others" name="gender" value="others">others</td> 
+					
+
+			</tr>
+
+			<tr>
+				<td>mail</td>
+				<td><input type="text" name="smail"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="" value="submit"></td>
+			</tr>
+		</table>
+	</form>
+
+
+</body>
+</html>
+{% endblock %}

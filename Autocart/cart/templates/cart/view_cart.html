@@ -1,0 +1,47 @@
+{% extends 'temp/customer_base.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<body>
+		<h2>view cart</h2>
+		<table class="table table-striped text-light table-bordered">
+			<tr> 
+				<th>product name</th>
+				<th>price</th>
+				<th>quantity</th>
+                <th>manufacture date</th>
+				<th>experity date</th>
+
+			</tr>
+            {% for i in ac %}
+
+			<tr>
+
+				<td>{{ i.product.product_name}}</td>
+
+				<td>{{ i.product.product_price}}</td>
+                <td>{{ i.quantity }}</td>
+				<td>{{ i.product.manufacturer_date }}</td>
+				<td>{{ i.product.product_experity }}</td>
+
+{#                <td><a href="">product</a> </td>#}
+			</tr>
+            {% endfor %}
+
+
+
+
+
+		</table>
+     <form action="{% url 'checkout_action_url' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Checkout</button>
+    </form>
+
+
+	</body>
+</html>
+{% endblock %}

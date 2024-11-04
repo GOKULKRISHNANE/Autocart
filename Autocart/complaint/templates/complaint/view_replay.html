@@ -1,0 +1,40 @@
+{% extends 'temp/customer_base.html' %}
+{% block base %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<body>
+		<h2>view replay</h2>
+		<table class="table table-striped text-light table-bordered">
+			<tr> 
+				<th>replay</th>
+				<th>customer</th>
+				<th>date</th>
+				<th>time</th>
+
+			</tr>
+            {% for i in ab %}
+			<tr>
+				<td>{{i.replay}}</td>
+				<td>{{ i.customer.customer_name}}</td>
+				<td>{{ i.date }}</td>
+				<td>{{ i.time }}</td>
+
+				
+			
+			
+
+			</tr>
+            {% endfor %}
+
+
+		</table>
+
+
+	</body>
+</html>
+{% endblock %}
